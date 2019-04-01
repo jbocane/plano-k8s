@@ -16,11 +16,12 @@ spec:
     - port: 8081
       targetPort: 8081
       protocol: TCP
+      nodePort: 32881
       name: container-lac-ssg-port
     - port: 8080
       targetPort: 8080
       protocol: TCP
-      nodePort: 32080
+      nodePort: 32880
       name: container-lac-http-port
 ---
 apiVersion: extensions/v1beta1
@@ -37,21 +38,21 @@ spec:
         app: lac
     spec:
       containers:
-      - name: lac-container
-        image: caliveapicreator/5.1.00
-        imagePullPolicy: Always
-        ports:
-          - containerPort: 8081
-          - containerPort: 8080
-        env:
-          - name: ca_accept_license
-            value: "enu"
-          - name: LAC_ADMIN_MAX_CONN
-            value: "100"
-        resources:
-          requests:
+        - name: lac-container
+          image: caliveapicreator/5.1.00
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8081
+            - containerPort: 8080
+          env:
+            - name: ca_accept_license
+              value: "enu"
+            - name: LAC_ADMIN_MAX_CONN
+              value: "100"
+          resources:
+            requests:
               cpu: 1000m
               memory: 2Gi
-          limits:
+            limits:
               cpu: 2000m
               memory: 3Gi
