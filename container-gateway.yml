@@ -16,10 +16,12 @@ spec:
     - protocol: TCP
       port: 8080
       targetPort: 8080
+      nodePort: 32080
       name: gw-http-port
     - protocol: TCP
       port: 8443
       targetPort: 8443
+      nodePort: 32443
       name: gw-https-port
     - protocol: TCP
       port: 9443
