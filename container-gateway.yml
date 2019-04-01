@@ -16,16 +16,17 @@ spec:
     - protocol: TCP
       port: 8080
       targetPort: 8080
-      nodePort: 32080
+      nodePort: 31080
       name: gw-http-port
     - protocol: TCP
       port: 8443
       targetPort: 8443
-      nodePort: 32443
+      nodePort: 31843
       name: gw-https-port
     - protocol: TCP
       port: 9443
       targetPort: 9443
+      nodePort: 31943
       name: gw-pm-port
 ---
 apiVersion: extensions/v1beta1
