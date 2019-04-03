@@ -9,10 +9,12 @@ sleep 5
 echo INFO: Exposing Gateway ports
 kubectl expose deployment gw-dc --type=NodePort
 
-echo 
+echo   
+echo kubectl get service
 kubectl get service
 
-echo
+echo  
+echo kubectl get pods
 kubectl get pods
 
 echo INFO: Please wait for Gateway to start...
