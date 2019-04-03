@@ -1,8 +1,0 @@
-
-
-This is the command we used to pull down the policy.  No need to ever run it again.
-$ curl -k -u admin:password https://35.239.236.65:31843/restman/1.0/services?name=lac-policy
-
-
-This is the command to actual publish this "lac-policy.xml" to your gateway.  Please fix the IP address below.
-$ curl -k -u admin:password -H "Content-Type: application/xml" -X POST -d @restManCreateService.xml https://35.239.236.65:31843/restman/1.0/services
