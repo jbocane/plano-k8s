@@ -42,9 +42,20 @@ spec:
       labels:
         app: gw
     spec:
+      volumes:
+        - name: restman
+          configMap:
+            name: license
+            items:
+              - key: accept.license
+                path: accept
       containers:
         - name: gw
           image: caapim/gateway
+          volumeMounts:
+            - name: restman
+              mountPath: /opt/SecureSpan/Gateway/node/default/etc/bootstrap/services/restman
+              subPath: accept
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
