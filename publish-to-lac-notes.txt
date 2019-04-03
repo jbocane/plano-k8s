@@ -2,6 +2,7 @@ This is the command to actual publish this "lac-policy.xml" to your gateway.
 
 Instructions:
  - Edit the lac-policy.xml file and insert your Internal IP address on line 58.
+ - Your IP addresses can be found in Google Cloud under "Compute Engine" and "VM Instances".
  - Save and exit.
 
  - Please fix the IP address in the curl command below with your External IP.
