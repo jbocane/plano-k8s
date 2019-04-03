@@ -1,7 +1,10 @@
 This is the command to actual publish this "lac-policy.xml" to your gateway.  
 
 Instructions:
- - Please fix the IP address below.
+ - Edit the lac-policy.xml file and insert your Internal IP address on line 58.
+ - Save and exit.
+
+ - Please fix the IP address in the curl command below with your External IP.
  - You must cut/paste this curl command into a terminal on your machine.  It will not run on the Google Cloud Shell unless you make some firewall changes.
 
 curl -k -u admin:password -H "Content-Type: application/xml" -X POST -d @lac-policy.xml https://[[YOUR_EXTERNAL_IP]]:31843/restman/1.0/services
